@@ -36,7 +36,7 @@ int i = 1;
     i = 0;
     int a = len - 1;
     while (i < a) {
-        while ((arr[i] + arr[a] > value) && (a>i)) {
+        while ((arr[i] + arr[a] > value) && (a > i)) {
             a--;
         }
         while ((arr[i] + arr[a] == value) && (a > i)) {
@@ -75,8 +75,7 @@ int i = 0;
         if (arr[x] < value) {
             i = x;
             x++;
-        }
-        else {
+        } else {
             j = x-1;
             x--;
         }
