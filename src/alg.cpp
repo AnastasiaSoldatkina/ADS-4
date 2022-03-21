@@ -16,24 +16,8 @@ int i = 0;
     return G;
 }
 int countPairs2(int *arr, int len, int value) {
-int i = 1;
-    int r = 0;
+int i = 0;
     int Z = 0;
-    if (arr[0] > arr[1]) {
-        r = arr[1];
-        arr[1] = arr[0];
-        arr[0] = r;
-    }
-    while (i < len-1) {
-        while (arr[i] > arr[i + 1]) {
-            r = arr[i + 1];
-            arr[i + 1] = arr[i];
-            arr[i] = r;
-            i--;
-        }
-        i++;
-    }
-    i = 0;
     int a = len - 1;
     while (i < a) {
         while ((arr[i] + arr[a] > value) && (a > i)) {
@@ -83,25 +67,9 @@ int i = 0;
     return Res;
 }
 int countPairs3(int *arr, int len, int value) {
-int i = 1;
-    int r = 0;
-    int c = 0;
+int c = 0;
     int Con = 0;
     int min = 0;
-    if (arr[0] > arr[1]) {
-        r = arr[1];
-        arr[1] = arr[0];
-        arr[0] = r;
-    }
-    while (i < len - 1) {
-        while (arr[i] > arr[i + 1]) {
-            r = arr[i + 1];
-            arr[i + 1] = arr[i];
-            arr[i] = r;
-            i--;
-        }
-        i++;
-    }
     while (arr[c] < value - arr[c]) {
         min = value - arr[c];
         Con = Con + cbinsearch(arr, len, min);
