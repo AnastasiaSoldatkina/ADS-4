@@ -16,18 +16,13 @@ int i = 0;
     return G;
 }
 int countPairs2(int *arr, int len, int value) {
-    int i = 0;
     int Z = 0;
-    int a = len - 1;
-    while (i < a) {
-        while ((arr[i] + arr[a] >= value) && (a > i)) {
-            if ((arr[i] + arr[a] == value)) {
+    for (int i = 0; i < len; i++) {
+        for (int a = len - 1; a > i; a--) {
+            if (arr[i] + arr[a] == value) {
                 Z++;
             }
-            a--;
         }
-        i++;
-        a = len-1;
     }
     return Z;
 }
