@@ -76,8 +76,12 @@ int c = 0;
         c++;
     }
     if (value % 2 == 0) {
-        min = value / 2;
-        Con = Con + cbinsearch(arr, len, min) / 2;
+        min = value/2;
+        int r = cbinsearch(arr, len, min) - 1;
+        while (r > 0) {
+            Con = Con + r;
+            r--;
+        }
     }
     return Con;
 }
