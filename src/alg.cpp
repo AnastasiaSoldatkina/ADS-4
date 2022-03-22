@@ -77,7 +77,7 @@ int c = 0;
     }
     if (value % 2 == 0) {
         min = value / 2;
-        Con = Con + cbinsearch(arr, len, min);
+        Con = Con + cbinsearch(arr, len, min) / 2;
     }
     return Con;
 }
