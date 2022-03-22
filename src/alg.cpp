@@ -16,7 +16,7 @@ int i = 0;
     return G;
 }
 int countPairs2(int *arr, int len, int value) {
-int i = 0;
+    int i = 0;
     int Z = 0;
     int a = len - 1;
     while (i < a) {
