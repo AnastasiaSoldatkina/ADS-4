@@ -20,11 +20,10 @@ int i = 0;
     int Z = 0;
     int a = len - 1;
     while (i < a) {
-        while ((arr[i] + arr[a] > value) && (a > i)) {
-            a--;
-        }
-        while ((arr[i] + arr[a] == value) && (a > i)) {
-            Z++;
+        while ((arr[i] + arr[a] >= value) && (a > i)) {
+            if ((arr[i] + arr[a] == value)) {
+                Z++;
+            }
             a--;
         }
         i++;
